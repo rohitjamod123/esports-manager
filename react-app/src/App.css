@@ -1,0 +1,24 @@
+:root { --bg:#0d0f14; --panel:#161a22; --line:#2a3140; --fire:#ff6a00; --gold:#ffc21a; --text:#eef1f6; --muted:#98a2b3; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; }
+h1, h3 { font-family: 'Orbitron', sans-serif; margin: 0; }
+.app { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+.top { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 2px solid var(--fire); }
+.top h1 span { color: var(--fire); } .top small { font-size: .6rem; color: var(--muted); font-family: 'Rajdhani'; }
+.tabs { display: flex; gap: .5rem; margin: 1rem 0; }
+.tabs button { background: var(--panel); color: var(--muted); border: 0; padding: .6rem 1.2rem; font: inherit; font-weight: 700; cursor: pointer; }
+.tabs button.on { background: var(--fire); color: #1a0f00; }
+.inline-form { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.panel { background: var(--panel); padding: 1rem; margin-bottom: 1rem; }
+input { background: #1d222d; border: 1px solid var(--line); color: var(--text); padding: .5rem; font: inherit; }
+.btn { background: linear-gradient(135deg, var(--gold), var(--fire)); border: 0; padding: .55rem 1.1rem; font: inherit; font-weight: 700; cursor: pointer; color: #1a0f00; }
+.btn.ghost { background: #1d222d; color: var(--text); } .btn.danger { background: #3a1517; color: #ff8d8d; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+.card { background: var(--panel); padding: 1rem; border-top: 3px solid var(--fire); }
+.card h3 { font-size: 1rem; margin: .5rem 0; } .card p { margin: .25rem 0; color: var(--muted); }
+.chip { background: var(--gold); color: #1a0f00; font-family: 'Orbitron'; font-weight: 800; padding: .2rem .5rem; font-size: .8rem; }
+.status { font-family: 'Orbitron'; font-size: .65rem; padding: .2rem .5rem; background: #2b2f38; }
+.status.Live { background: #ff3b3b; } .status.Upcoming { background: #1c3350; color: #7fb7ff; }
+.prize { color: var(--gold) !important; font-family: 'Orbitron'; font-size: 1.3rem; }
+.error { color: #ff8d8d; }
+@media (max-width: 600px) { .top { flex-direction: column; align-items: flex-start; } }

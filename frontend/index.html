@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Booyah Arena - manage esports squads, players and tournaments.">
+<title>Booyah Arena | Esports Squad & Tournament Manager</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="navbar"></div>
+
+<header class="hero">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <h1>Squad up.<br>Drop in.<br><em>Booyah.</em></h1>
+        <p class="lead">Register your squad, track every player's stats and enter live Free Fire MAX style tournaments, all from one place.</p>
+        <div class="d-flex gap-3 flex-wrap mt-4">
+          <a href="tournaments.html" class="btn-fire">Browse tournaments</a>
+          <a href="teams.html" class="btn-ghost">View squads</a>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <aside class="countdown-box" aria-live="polite">
+          <h3>Next tournament starts in</h3>
+          <div class="name" id="nextName">Loading...</div>
+          <div class="timer">
+            <div><b id="cdD">--</b><small>days</small></div>
+            <div><b id="cdH">--</b><small>hrs</small></div>
+            <div><b id="cdM">--</b><small>min</small></div>
+            <div><b id="cdS">--</b><small>sec</small></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section pb-0">
+    <div class="container">
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3"><div class="stat"><b data-count="teams">0</b><span>Squads</span></div></div>
+        <div class="col-6 col-md-3"><div class="stat"><b data-count="players">0</b><span>Players</span></div></div>
+        <div class="col-6 col-md-3"><div class="stat"><b data-count="tournaments">0</b><span>Tournaments</span></div></div>
+        <div class="col-6 col-md-3"><div class="stat"><b id="prizeStat">₹0</b><span>Total prize pool</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Open for registration</h2>
+      <div class="row g-4" id="featured"></div>
+      <div class="mt-4"><a href="tournaments.html" class="btn-ghost btn-sm-ff d-inline-block">See all tournaments</a></div>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container">
+      <h2 class="section-title">Squad leaderboard</h2>
+      <div class="table-wrap">
+        <table class="table-ff">
+          <caption class="visually-hidden">Top squads by points</caption>
+          <thead><tr><th>Rank</th><th>Squad</th><th>Region</th><th>Wins</th><th>Points</th></tr></thead>
+          <tbody id="board"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container">
+      <h2 class="section-title">How it works</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><article class="card-ff h-100"><h3>1. Create your squad</h3><p class="meta">Sign up as a captain, add your squad and list the four players with their roles.</p></article></div>
+        <div class="col-md-4"><article class="card-ff h-100"><h3>2. Pick a tournament</h3><p class="meta">Filter by upcoming, live or completed events and check prize pool and open slots.</p></article></div>
+        <div class="col-md-4"><article class="card-ff h-100"><h3>3. Register and play</h3><p class="meta">Lock your slot in one click. Points and wins update the leaderboard.</p></article></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
